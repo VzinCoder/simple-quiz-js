@@ -102,7 +102,7 @@ const checkAnswer = (question, response) => {
 }
 
 
-const inserRandomAnswer = () => {
+const insertRandomAnswer = () => {
     if (arrTemplate.length > 0) {
         const randomNumber = Math.floor(Math.random() * arrTemplate.length)
         const cardTemplate = arrTemplate[randomNumber]
@@ -143,7 +143,7 @@ const handleClick = ({ target }) => {
             checkAnswer(question, response)
         }
 
-        if (!inserRandomAnswer()) {
+        if (!insertRandomAnswer()) {
             insertResultQuiz()
         }
 
