@@ -134,11 +134,11 @@ const getQuestionAndResponse = (element) => {
 const handleClick = ({ target }) => {
     const elementClicked = target
     const isButton = elementClicked.tagName === 'BUTTON'
-    const isBetweenStartAndRestart = elementClicked.id != 'start' && elementClicked.id != 'restart'
+    const isDiferrentStartAndRestart = elementClicked.id != 'start' && elementClicked.id != 'restart'
 
     if (isButton) {
 
-        if (isBetweenStartAndRestart) {
+        if (isDiferrentStartAndRestart) {
             const { question, response } = getQuestionAndResponse(elementClicked)
             checkAnswer(question, response)
         }
